@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monkey Times</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'monkey/main.css'%}">
+</head>
+<body>
+    <h1>{{ monkey }} Index</h1>
+    {% for m in monkies %}
+        <a href="/monkey/{{m.id}}"><h1>{{ m.first_name }} {{m.last_name}}</h1></a>
+        
+    {% endfor %}
+</body>
+</html>
