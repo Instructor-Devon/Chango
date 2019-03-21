@@ -11,6 +11,7 @@ class Monkey(models.Model):
     email = models.EmailField(unique=True)
     # phonenumber
     phone_number = models.IntegerField()
+    password = models.CharField(max_length=255)
 
 
     created_at = models.DateField(auto_now_add=True)

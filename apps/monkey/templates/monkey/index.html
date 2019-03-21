@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>{{ monkey }} Index</h1>
+    <h2><a href="/registration">Sign up here!</a></h2>
     {% for m in monkies %}
         <a href="/monkey/{{m.id}}"><h1>{{ m.first_name }} {{m.last_name}}</h1></a>
         

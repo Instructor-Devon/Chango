@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^$', views.index),
     # localhost:8000/monkey/banana
     url(r'^monkey$', views.monkey),
+    url(r'^registration$', views.registration),
     # localhost:8000/monkey/:monkey_id
     url(r'^monkey/(?P<monkey_id>[0-9]+)$', views.show),
     # localhost:8000/monkey/:monkey_name
