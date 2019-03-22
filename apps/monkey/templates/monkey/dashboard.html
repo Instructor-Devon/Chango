@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'monkey/main.css' %}">
+</head>
+<body>
+		<h1>Hello, {{ monkey.first_name }}</h1>
+		<hr>
+		<h2>Create a post ya dam chango!</h2>
+		<form action="/create/post" method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="">Content</label>
+				<textarea name="content"></textarea>
+			</div>
+			<button>Send IT</button>
+		</form>
+		<hr>
+		<h2>All Posts!</h2>
+		{% for p in posties %}
+		<div class="post">
+			<p>{{ p.content }}</p>
+			<h6>(scribed by <a href="/monkey/{{p.author.id}}">{{ p.author.first_name }}</a> ({{p.created_at}}))</h6>
+		</div>
+		{% endfor %}
+</body>
+</html>

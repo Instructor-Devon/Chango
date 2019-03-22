@@ -4,3 +4,11 @@ body {
 h1, h2, h3 {
     color: salmon
 }
+
+.logreg input {
+	display: block;	
+}
+
+.form-group label {
+    display: block;
+}

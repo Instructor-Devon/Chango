@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chango</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'monkey/main.css' %}">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'monkey/main.css' %}">
 </head>
 <body>
-    <h1>Show {{monkey}}</h1>
+    <h1>{{monkey}}'s cool profile page</h1>
+    <hr>
+    <h2>STATS:</h2>
+    <h5><strong>Date Added</strong> {{monkey.created_at}}</h5>
+    <h5><strong>Number of posts</strong> {{ monkey.created_posts.count }}</h5>
 </body>
 </html>
